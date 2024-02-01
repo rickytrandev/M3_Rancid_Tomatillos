@@ -1,9 +1,15 @@
-/* .poster-wrapper {
-  width: 100px;
-  height: 200px;
-} */
+.poster-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  place-items: center;
+  gap: 20px;
+}
 
 .poster {
   width: 150px;
   height: 225px;
+}
+
+.pointer-cursor {
+  cursor: pointer;
 }
