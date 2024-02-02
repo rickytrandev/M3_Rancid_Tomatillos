@@ -36,7 +36,7 @@ function MovieDetails(props) {
       >
       <div className="movie-details-card">
         <h2>{props.title}</h2>
-        <img className='poster' src={props.poster_path} alt={`${props.title} movie poster`}/>
+        <img className='movie-details-poster' src={props.poster_path} alt={`${props.title} movie poster`}/>
         <div className="movie-details">
           <p>Released: {formattedDate}</p>
           <p>Rating: {props.average_rating.toFixed(1)}</p>

@@ -11,10 +11,10 @@ body {
   background-color: white;
 }
 
-.poster {
+.movie-details-poster {
   width: 150px;
   height: 225px;
-  margin: 0;
+  margin: 20;
   justify-self: start;
 }
 
