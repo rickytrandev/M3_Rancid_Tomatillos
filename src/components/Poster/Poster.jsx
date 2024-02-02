@@ -3,7 +3,6 @@ import './Poster.css'
 
 function Poster({movies}) {
   const [isMousedOver, setMouseOver] = useState(false)
-
   function setTrue() {
     setMouseOver(true)
   }

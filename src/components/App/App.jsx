@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import movieData from '../../Data/Data';
 import Poster from '../Poster/Poster';
 
 function App() {
-  const [movies, setMovies] = useState(movieData)
+  const [movies, setMovies] = useState([])
+
+  function getAllMovies() {
+    fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
+      .then(response => response.json())
+      .then(data => setMovies(data.movies))
+      .catch(error => console.log(error))
+  }
+
+  useEffect(() => {
+    getAllMovies()
+  }, [])
 
   return (
     <main>
-      <Poster 
-        movies = {movies.movies}
+      <Poster
+        movies={movies}
       />
     </main>
   )
