@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+}
+
+.movie-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.poster {
+  width: 150px;
+  height: 225px;
+  margin: 0;
+  justify-self: start;
+}
+
+h2 {
+  color: white;
+  grid-column-end: span 2 ;
+  font-size: 50px;
+}
+
+.movie-details-card {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.movie-details {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+}

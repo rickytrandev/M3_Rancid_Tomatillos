@@ -1,13 +1,15 @@
-.poster-wrapper {
+.posters-wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   place-items: center;
-  gap: 20px;
+  gap: 0px;
+  background-color: black;
 }
 
 .poster {
   width: 150px;
   height: 225px;
+  margin: 20px;
 }
 
 .pointer-cursor {
