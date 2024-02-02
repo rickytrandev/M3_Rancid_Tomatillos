@@ -1,11 +1,11 @@
 import React, { useState, useEffect, createRef } from 'react';
 import './App.css';
-import movieData from '../../Data/Data';
 import Poster from '../Poster/Poster';
 import MovieDetails from '../MovieDetails/MovieDetails';
 
 function App() {
-  const [movies, setMovies] = useState(movieData)
+
+    const [movies, setMovies] = useState([])
   const [currentPoster, setCurrentPoster] = useState({})
 
   function updateCurrentPoster(movie) {
@@ -29,6 +29,26 @@ function App() {
           updateCurrentPoster = {updateCurrentPoster}
         />
       }
+
+
+
+  function getAllMovies() {
+    fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
+      .then(response => response.json())
+      .then(data => setMovies(data.movies))
+      .catch(error => console.log(error))
+  }
+
+  useEffect(() => {
+    getAllMovies()
+  }, [])
+
+  return (
+    <main>
+      <Poster
+        movies={movies}
+      />
+
     </main>
   )
 }
