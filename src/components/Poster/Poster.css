@@ -10,6 +10,21 @@
   width: 150px;
   height: 225px;
   margin: 20px;
+  transition: transform 300ms ease 100ms;
+  flex: 0 0 19.7%;
+}
+
+
+.posters-wrapper:hover .poster {
+  transform: translateX(-25%);
+}
+
+.poster:hover ~ .poster {
+  transform: translateX(25%);
+}
+
+.poster:hover {
+  transform: scale(1.2) !important;
 }
 
 .pointer-cursor {
