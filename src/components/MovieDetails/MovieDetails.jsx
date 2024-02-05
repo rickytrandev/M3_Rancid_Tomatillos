@@ -32,11 +32,13 @@ function MovieDetails(props) {
   return (
     <div className="movie-details-container">
       <div className="movie-details-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-lg close-btn" viewBox="0 0 16 16" onClick={() => window.location.reload()}>
+          <path className='x-btn' d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+        </svg>
         <h2  className='card-title'>{props.title}</h2>
-        {/* <img className='movie-details-poster' src={props.poster_path} alt={`${props.title} movie poster`}/> */}
         <div className="movie-details">
-          <p className='details' >Released: {formattedDate}</p>
-          <p className='details' >Rating: {props.average_rating.toFixed(1)}</p>
+          <p className='details release-date'>Released: {formattedDate}</p>
+          <p className='details rating'>Rating: {props.average_rating.toFixed(1)}</p>
         </div>
       </div>
       <div 

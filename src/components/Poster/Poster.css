@@ -1,6 +1,6 @@
 .posters-wrapper {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   place-items: center;
   gap: 0px;
   background-color: black;
@@ -29,4 +29,9 @@
 
 .pointer-cursor {
   cursor: pointer;
+}
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+  background-color: black;
 }

@@ -1,0 +1,18 @@
+header {
+  color: #0485ef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  padding: 0px 20px 0px 20px;
+}
+
+.home-btn {
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.home-btn:hover {
+  transform: scale(1.2) !important;
+}
