@@ -37,8 +37,8 @@ function MovieDetails(props) {
         </svg>
         <h2  className='card-title'>{props.title}</h2>
         <div className="movie-details">
-          <p className='details'>Released: {formattedDate}</p>
-          <p className='details'>Rating: {props.average_rating.toFixed(1)}</p>
+          <p className='details release-date'>Released: {formattedDate}</p>
+          <p className='details rating'>Rating: {props.average_rating.toFixed(1)}</p>
         </div>
       </div>
       <div 

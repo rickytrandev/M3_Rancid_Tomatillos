@@ -42,72 +42,75 @@ function Poster({movies, updateCurrentPoster}) {
   }
 
   return (
-    <>
-      <Carousel 
-        responsive={responsive}
-        infinite={true}
-        // autoPlay={true}
-        // autoPlaySpeed={2000}
-        // rewind={true}
-        >
-        {moviesRow1.map(movie => (
-          <img 
-          id={movie.id}
-          key={movie.id}
-          onClick={() => updateCurrentPoster(movie)}
-          onMouseOver={setTrue} 
-          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
-          src={movie.poster_path} 
-          alt={`${movie.title} movie poster`} 
-          />
-        ))}
-      </Carousel>
-      <Carousel 
-        responsive={responsive}
-        infinite={true}
-        >
-        {moviesRow2.map(movie => (
-          <img 
-          id={movie.id}
-          key={movie.id}
-          onClick={() => updateCurrentPoster(movie)}
-          onMouseOver={setTrue} 
-          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
-          src={movie.poster_path} 
-          alt={`${movie.title} movie poster`} 
-          />
-        ))}
-      </Carousel>
-      <Carousel 
-        responsive={responsive}
-        infinite={true}
-        >
-        {moviesRow3.map(movie => (
-          <img 
-          id={movie.id}
-          key={movie.id}
-          onClick={() => updateCurrentPoster(movie)}
-          onMouseOver={setTrue} 
-          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
-          src={movie.poster_path} 
-          alt={`${movie.title} movie poster`} 
-          />
-        ))}
-      </Carousel>
-    </>
-    // <div className="posters-wrapper">
-    //   {movies.map(movie => (
-    //     <img 
-    //     id={movie.id}
-    //     key={movie.id}
-    //     onClick={() => updateCurrentPoster(movie)}
-    //     onMouseOver={setTrue} 
-    //     className={`poster ${isMousedOver && 'pointer-cursor'}`} 
-    //     src={movie.poster_path} 
-    //     alt={`${movie.title} movie poster`} 
-    //     />
-    //   ))}
-    // </div>
+    // <>
+    //   <Carousel
+    //     id="track-1"
+    //     responsive={responsive}
+    //     infinite={true}
+    //     // autoPlay={true}
+    //     // autoPlaySpeed={2000}
+    //     // rewind={true}
+    //     >
+    //     {moviesRow1.map(movie => (
+    //       <img 
+    //       id={movie.id}
+    //       key={movie.id}
+    //       onClick={() => updateCurrentPoster(movie)}
+    //       onMouseOver={setTrue} 
+    //       className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+    //       src={movie.poster_path} 
+    //       alt={`${movie.title} movie poster`} 
+    //       />
+    //     ))}
+    //   </Carousel>
+    //   <Carousel 
+    //     id="track-2"
+    //     responsive={responsive}
+    //     infinite={true}
+    //     >
+    //     {moviesRow2.map(movie => (
+    //       <img 
+    //       id={movie.id}
+    //       key={movie.id}
+    //       onClick={() => updateCurrentPoster(movie)}
+    //       onMouseOver={setTrue} 
+    //       className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+    //       src={movie.poster_path} 
+    //       alt={`${movie.title} movie poster`} 
+    //       />
+    //     ))}
+    //   </Carousel>
+    //   <Carousel
+    //     id="track-3"
+    //     responsive={responsive}
+    //     infinite={true}
+    //     >
+    //     {moviesRow3.map(movie => (
+    //       <img 
+    //       id={movie.id}
+    //       key={movie.id}
+    //       onClick={() => updateCurrentPoster(movie)}
+    //       onMouseOver={setTrue} 
+    //       className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+    //       src={movie.poster_path} 
+    //       alt={`${movie.title} movie poster`} 
+    //       />
+    //     ))}
+    //   </Carousel>
+    // </>
+    <div className="posters-wrapper">
+      {movies.map(movie => (
+        <img 
+        id={movie.id}
+        key={movie.id}
+        onClick={() => updateCurrentPoster(movie)}
+        onMouseOver={setTrue} 
+        className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+        src={movie.poster_path} 
+        alt={`${movie.title} movie poster`} 
+        />
+      ))}
+    </div>
   )
 }
 
