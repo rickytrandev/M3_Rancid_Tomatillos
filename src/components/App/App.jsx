@@ -2,6 +2,7 @@ import React, { useState, useEffect, createRef } from 'react';
 import './App.css';
 import Poster from '../Poster/Poster';
 import MovieDetails from '../MovieDetails/MovieDetails';
+import Header from '../Header/Header';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <main>
+      
       {Object.keys(currentPoster).length ? 
         <MovieDetails 
           id={currentPoster.id}
@@ -33,11 +35,14 @@ function App() {
           average_rating={currentPoster.average_rating}
           release_date={currentPoster.release_date}
         /> 
-        : 
-        <Poster 
-          movies={movies}
-          updateCurrentPoster={updateCurrentPoster}
-        />
+        :
+        <>
+          <Header />
+          <Poster 
+            movies={movies}
+            updateCurrentPoster={updateCurrentPoster}
+          />
+        </>
       }
     </main>
   );
