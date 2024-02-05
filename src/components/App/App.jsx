@@ -25,7 +25,6 @@ function App() {
 
   return (
     <main>
-      
       {Object.keys(currentPoster).length ? 
         <MovieDetails 
           id={currentPoster.id}

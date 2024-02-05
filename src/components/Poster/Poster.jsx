@@ -13,7 +13,7 @@ function Poster({movies, updateCurrentPoster}) {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 5
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -28,10 +28,6 @@ function Poster({movies, updateCurrentPoster}) {
   let moviesRow1 = movies.slice(0, 15)
   let moviesRow2 = movies.slice(15, 29)
   let moviesRow3 = movies.slice(29, 40)
-  console.log('all movies', movies);
-  console.log('row1', moviesRow1);
-  console.log('row2', moviesRow2);
-  console.log('row3', moviesRow3);
 
   // <Carousel responsive={responsive}>
   //   <div>Item 1</div>
@@ -46,19 +42,72 @@ function Poster({movies, updateCurrentPoster}) {
   }
 
   return (
-    <div className="posters-wrapper">
-      {movies.map(movie => (
-        <img 
-        id={movie.id}
-        key={movie.id}
-        onClick={() => updateCurrentPoster(movie)}
-        onMouseOver={setTrue} 
-        className={`poster ${isMousedOver && 'pointer-cursor'}`} 
-        src={movie.poster_path} 
-        alt={`${movie.title} movie poster`} 
-        />
-      ))}
-    </div>
+    <>
+      <Carousel 
+        responsive={responsive}
+        infinite={true}
+        // autoPlay={true}
+        // autoPlaySpeed={2000}
+        // rewind={true}
+        >
+        {moviesRow1.map(movie => (
+          <img 
+          id={movie.id}
+          key={movie.id}
+          onClick={() => updateCurrentPoster(movie)}
+          onMouseOver={setTrue} 
+          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+          src={movie.poster_path} 
+          alt={`${movie.title} movie poster`} 
+          />
+        ))}
+      </Carousel>
+      <Carousel 
+        responsive={responsive}
+        infinite={true}
+        >
+        {moviesRow2.map(movie => (
+          <img 
+          id={movie.id}
+          key={movie.id}
+          onClick={() => updateCurrentPoster(movie)}
+          onMouseOver={setTrue} 
+          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+          src={movie.poster_path} 
+          alt={`${movie.title} movie poster`} 
+          />
+        ))}
+      </Carousel>
+      <Carousel 
+        responsive={responsive}
+        infinite={true}
+        >
+        {moviesRow3.map(movie => (
+          <img 
+          id={movie.id}
+          key={movie.id}
+          onClick={() => updateCurrentPoster(movie)}
+          onMouseOver={setTrue} 
+          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+          src={movie.poster_path} 
+          alt={`${movie.title} movie poster`} 
+          />
+        ))}
+      </Carousel>
+    </>
+    // <div className="posters-wrapper">
+    //   {movies.map(movie => (
+    //     <img 
+    //     id={movie.id}
+    //     key={movie.id}
+    //     onClick={() => updateCurrentPoster(movie)}
+    //     onMouseOver={setTrue} 
+    //     className={`poster ${isMousedOver && 'pointer-cursor'}`} 
+    //     src={movie.poster_path} 
+    //     alt={`${movie.title} movie poster`} 
+    //     />
+    //   ))}
+    // </div>
   )
 }
 
