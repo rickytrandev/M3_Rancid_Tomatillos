@@ -46,6 +46,7 @@ function MovieDetails(props) {
         </Link>
         <h2  className='card-title'>{findMovie.title}</h2>
         <div className="movie-details">
+          <img src={findMovie.poster_path} alt="" className="movie-poster" />
           <p className='details release-date'>Released: {formattedDate}</p>
           <p className='details rating'>Rating: {findMovie.average_rating.toFixed(1)}</p>
         </div>

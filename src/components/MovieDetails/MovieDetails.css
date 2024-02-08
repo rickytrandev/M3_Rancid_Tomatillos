@@ -71,3 +71,44 @@
 .x-btn {
   color: white;
 }
+
+@media (max-width:480px) {
+  .movie-poster {
+    width: 75%;
+  }
+  .backdrop {
+    display: none;
+  }
+  .movie-details-card {
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+    content: none;
+    background-image: none;
+    left: 0;
+  }
+  .card-title {
+    width: 90%;
+    font-size: 5vh;
+    overflow: visible;
+    max-height: 100%;
+  }
+  .movie-details-card:before {
+    display: none;
+  }
+  .movie-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .close-btn {
+    top: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+  }
+  * {
+    background-color: black;
+  }
+}
