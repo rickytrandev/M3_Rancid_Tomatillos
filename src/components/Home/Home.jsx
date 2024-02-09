@@ -1,5 +1,6 @@
 import Header from "../Header/Header"
 import Poster from "../Poster/Poster"
+import { PropTypes } from 'prop-types'
 
 function Home({movies, updateCurrentPoster}) {
   return (
@@ -14,3 +15,5 @@ function Home({movies, updateCurrentPoster}) {
 }
 
 export default Home
+
+

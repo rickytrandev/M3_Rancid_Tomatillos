@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Poster.css'
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import {PropTypes} from 'prop-types' 
 
 function Poster({movies, updateCurrentPoster}) {
   const responsive = {
@@ -110,3 +109,4 @@ function Poster({movies, updateCurrentPoster}) {
 }
 
 export default Poster
+

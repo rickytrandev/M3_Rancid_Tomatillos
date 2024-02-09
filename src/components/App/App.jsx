@@ -9,7 +9,16 @@ function App() {
 
   function getAllMovies() {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          if (response.status === 500) {
+            throw new Error('Internal Server Error')
+          } else {
+            throw new Error('Please try again later.')
+          }
+        }
+        return response.json()
+      })
       .then(data => setMovies(data.movies))
       .catch(error => console.log(error));
   }
@@ -21,7 +30,7 @@ function App() {
   return (
     <main>
       <Routes>
-        <Route path='/' element={<Home movies={movies}/>} />
+        <Route path='/' element={<Home movies={movies} />} />
         <Route path='/movie-details/:id' element={<MovieDetails movies={movies} />} />
       </Routes>
     </main>
