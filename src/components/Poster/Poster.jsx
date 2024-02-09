@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Poster.css'
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { PropTypes } from 'prop-types'
 
-
-function Poster({movies, updateCurrentPoster}) {
+function Poster({ movies, updateCurrentPoster }) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -95,13 +94,13 @@ function Poster({movies, updateCurrentPoster}) {
     <div className="posters-wrapper">
       {movies.map(movie => (
         <Link to={`/movie-details/${movie.id}`} >
-          <img 
-          id={movie.id}
-          key={movie.id}
-          onMouseOver={setTrue} 
-          className={`poster ${isMousedOver && 'pointer-cursor'}`} 
-          src={movie.poster_path} 
-          alt={`${movie.title} movie poster`} 
+          <img
+            id={movie.id}
+            key={movie.id}
+            onMouseOver={setTrue}
+            className={`poster ${isMousedOver && 'pointer-cursor'}`}
+            src={movie.poster_path}
+            alt={`${movie.title} movie poster`}
           />
         </Link>
       ))}
@@ -110,3 +109,8 @@ function Poster({movies, updateCurrentPoster}) {
 }
 
 export default Poster
+
+Poster.propTypes = {
+  movies: PropTypes.array.isRequired,
+  updateCurrentPoster: PropTypes.func.isRequired,
+}

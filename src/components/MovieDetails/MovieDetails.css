@@ -2,6 +2,7 @@
   display: flex;
   height: 100vh;
 }
+
 .movie-details-poster {
   width: 150px;
   height: 225px;
@@ -15,16 +16,19 @@
   background: black;
   width: 30%;
   position: relative;
-  background-image: linear-gradient(to right,#000,transparent);
+  background-image: linear-gradient(to right, #000, transparent);
   padding: 20px
 }
 
 .card-title {
-  width: 100%; 
-  max-width: 100%; 
-  max-height: 100%; /* Set a maximum height for the text */
-  margin: 0; /* Remove default margin for better fit */
-  overflow: hidden; /* Hide overflow if the text exceeds the specified width and height */
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  /* Set a maximum height for the text */
+  margin: 0;
+  /* Remove default margin for better fit */
+  overflow: hidden;
+  /* Hide overflow if the text exceeds the specified width and height */
   font-size: 5vw;
   font-family: 'Times New Roman', Times, serif;
   align-self: start;
@@ -43,7 +47,7 @@
 .movie-details-card:before {
   content: '';
   position: absolute;
-  background-image: linear-gradient(to right,#000,transparent);
+  background-image: linear-gradient(to right, #000, transparent);
   top: 0;
   bottom: 0;
   left: 100%;
@@ -70,7 +74,6 @@
 
 .x-btn {
   color: white;
-}
 
 @media (max-width:480px) {
   .movie-poster {
