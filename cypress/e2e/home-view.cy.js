@@ -31,4 +31,12 @@ describe('Rancid Home View', () => {
     .get('.release-date').contains('Released: November 11th, 2022')
     .get('.rating').contains('Rating: 1.0')
   })
+  it('when I click on the x button, i am directed back to the home page', () => {
+    cy.intercept("GET", "https://rancid-tomatillos.herokuapp.com/api/v2/movies", {
+      fixture: "../fixtures/movies"
+    })
+    .get(`.posters-wrapper img#${829799}`).click()
+    .get('.x-btn').click()
+    .get('h1').should('have.text', 'Rancid Tomatillos')
+  })
 })
