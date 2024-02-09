@@ -64,3 +64,6 @@ function MovieDetails(props) {
 
 export default MovieDetails
 
+MovieDetails.propTypes = {
+  movies: PropTypes.array.isRequired,
+}
