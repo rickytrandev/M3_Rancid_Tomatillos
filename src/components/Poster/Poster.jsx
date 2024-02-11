@@ -33,6 +33,6 @@ function Poster({ movies }) {
 
 export default Poster
 
-Poster.propTypes = {
-  movies: PropTypes.array.isRequired,
-}
+// Poster.propTypes = {
+//   movies: propTypes.array.isRequired,
+// }
