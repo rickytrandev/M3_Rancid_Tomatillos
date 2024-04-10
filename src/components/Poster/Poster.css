@@ -18,13 +18,13 @@ a {
   justify-content: center;
 }
 
-.posters-wrapper:hover .poster {
+/* .posters-wrapper:hover .poster {
   transform: translateX(-25%);
 }
 
 .poster:hover ~ .poster {
   transform: translateX(25%);
-}
+} */
 
 .poster:hover {
   transform: scale(1.2) !important;

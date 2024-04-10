@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Poster.css'
+import { PropTypes } from 'prop-types'
+
 
 function Poster({ movies }) {
-
-  let moviesRow1 = movies.slice(0, 15)
-  let moviesRow2 = movies.slice(15, 29)
-  let moviesRow3 = movies.slice(29, 40)
 
   const [isMousedOver, setMouseOver] = useState(false)
   function setTrue() {
